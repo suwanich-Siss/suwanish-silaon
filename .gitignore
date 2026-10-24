@@ -8,7 +8,7 @@ node_modules/
 dist/
 web-build/
 expo-env.d.ts
-scr/constants/app.js
+
 # Native
 .kotlin/
 *.orig.*
@@ -31,6 +31,8 @@ yarn-error.*
 *.pem
 
 # local env files
+.env
+.env.*
 .env*.local
 
 # typescript
@@ -40,7 +42,20 @@ yarn-error.*
 /ios
 /android
 
+# Android build artifacts
+android/app/build/
+android/build/
+android/.gradle/
+android/.kotlin/
+android/app/debug.keystore
+
 # SQLite runtime database (generated at runtime, not source)
 *.db
 *.db-shm
 *.db-wal
+
+# IDE
+.vscode/
+
+# Misc
+adb

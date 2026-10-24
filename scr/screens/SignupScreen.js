@@ -11,21 +11,21 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import { CustomInput, CustomButton } from "../components/UIComponents";
 import { COLORS } from "../styles/commonStyles";
-import { SignupStyle as styles  } from "../styles/authStyles";
+import { SignupStyle as styles } from "../styles/authStyles";
 import { createUser, acceptPDPA, getUserByEmail } from "../database/database";
 import { useAuth } from "../context/AuthContext";
 
 export default function SignupScreen({ navigation }) {
-  const [firstName,    setFirstName]    = useState("");
-  const [lastName,     setLastName]     = useState("");
-  const [dob,          setDob]          = useState("");
-  const [occupation,   setOccupation]   = useState("");
-  const [email,        setEmail]        = useState("");
-  const [password,     setPassword]     = useState("");
-  const [confirmPwd,   setConfirmPwd]   = useState("");
-  const [isAgreed,     setIsAgreed]     = useState(false);
-  const [showTerms,    setShowTerms]    = useState(false);
-  const [isLoading,    setIsLoading]    = useState(false);
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [dob, setDob] = useState("");
+  const [occupation, setOccupation] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPwd, setConfirmPwd] = useState("");
+  const [isAgreed, setIsAgreed] = useState(false);
+  const [showTerms, setShowTerms] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const { login } = useAuth();
 
   const handleRegister = async () => {
@@ -50,7 +50,7 @@ export default function SignupScreen({ navigation }) {
         lastName,
         email,
         password,   // TODO: hash ก่อน store ใน production
-        birthdate:  dob,
+        birthdate: dob,
         occupation,
       });
 
@@ -88,17 +88,17 @@ export default function SignupScreen({ navigation }) {
           </View>
 
           <View style={styles.form}>
-            <CustomInput icon="person-outline"    placeholder="ชื่อ"                        value={firstName}  onChangeText={setFirstName}  />
+            <CustomInput icon="person-outline" placeholder="ชื่อ" value={firstName} onChangeText={setFirstName} />
             <View style={styles.spacer} />
-            <CustomInput icon="person-outline"    placeholder="นามสกุล"                     value={lastName}   onChangeText={setLastName}   />
+            <CustomInput icon="person-outline" placeholder="นามสกุล" value={lastName} onChangeText={setLastName} />
             <View style={styles.spacer} />
-            <CustomInput icon="calendar-outline"  placeholder="วัน/เดือน/ปีเกิด (DD/MM/YYYY)" value={dob}     onChangeText={setDob}        />
+            <CustomInput icon="calendar-outline" placeholder="วัน/เดือน/ปีเกิด (DD/MM/YYYY)" value={dob} onChangeText={setDob} />
             <View style={styles.spacer} />
-            <CustomInput icon="briefcase-outline" placeholder="อาชีพ"                       value={occupation} onChangeText={setOccupation} />
+            <CustomInput icon="briefcase-outline" placeholder="อาชีพ" value={occupation} onChangeText={setOccupation} />
             <View style={styles.spacer} />
-            <CustomInput icon="mail-outline"      placeholder="อีเมล"                       value={email}      onChangeText={setEmail}      keyboardType="email-address" />
+            <CustomInput icon="mail-outline" placeholder="อีเมล" value={email} onChangeText={setEmail} keyboardType="email-address" />
             <View style={styles.spacer} />
-            <CustomInput icon="lock-closed-outline"    placeholder="รหัสผ่าน"       isPassword showToggle value={password}   onChangeText={setPassword}  />
+            <CustomInput icon="lock-closed-outline" placeholder="รหัสผ่าน" isPassword showToggle value={password} onChangeText={setPassword} />
             <View style={styles.spacerforpassword} />
             <CustomInput icon="shield-checkmark-outline" placeholder="ยืนยันรหัสผ่าน" isPassword showToggle value={confirmPwd} onChangeText={setConfirmPwd} />
 
