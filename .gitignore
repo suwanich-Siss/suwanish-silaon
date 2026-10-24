@@ -1,22 +1,41 @@
+
 # Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
 
 # dependencies
 node_modules/
 
-# Expo
+# --- Secrets & Credentials ---
+.env
+.env.*
+**/db_connect.php
+**/config/database.php
+
+# --- Node / Mobile App ---
+node_modules/
+>>>>>>> master
 .expo/
 dist/
 web-build/
 expo-env.d.ts
 
+
 # Native
 .kotlin/
 *.orig.*
+
+# --- Android build ---
+android/app/build/
+android/build/
+android/.gradle/
+android/.kotlin/
+android/app/debug.keystore
+>>>>>>> master
 *.jks
 *.p8
 *.p12
 *.key
 *.mobileprovision
+
 
 # Metro
 .metro-health-check*
@@ -50,12 +69,39 @@ android/.kotlin/
 android/app/debug.keystore
 
 # SQLite runtime database (generated at runtime, not source)
+=======
+# --- Metro ---
+.metro-health-check*
+
+# --- Database files ---
+>>>>>>> master
 *.db
 *.db-shm
 *.db-wal
 
+<<<<<<< HEAD
 # IDE
 .vscode/
 
 # Misc
 adb
+=======
+# --- IDE ---
+.vscode/
+.idea/
+
+# --- OS ---
+.DS_Store
+*.pem
+Thumbs.db
+
+# --- Logs ---
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+*.log
+error_log
+
+# --- TypeScript ---
+*.tsbuildinfo
+

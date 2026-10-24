@@ -1,0 +1,53 @@
+{
+  "expo": {
+    "name": "I&E",
+    "slug": "SlipScannerV2",
+    "version": "1.5.25",
+    "orientation": "portrait",
+    "icon": "./assets/Logoapp.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "usesCleartextTraffic": true,
+    "splash": {
+      "image": "./assets/Logoapp.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/Logoapp.png",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true,
+      "package": "com.suwanich.SlipScannerV2",
+      "usesCleartextTraffic": true,
+      "permissions": [
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.ACCESS_MEDIA_LOCATION",
+        "android.permission.RECEIVE_BOOT_COMPLETED"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-sqlite",
+            [ 
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#ffffff"
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "7b0fe458-bf9b-472f-be8d-68c79b0a487f"
+      }
+    }
+  }
+}

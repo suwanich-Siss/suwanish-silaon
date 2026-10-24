@@ -1,0 +1,13 @@
+# Database config with credentials - use db_connect.example.php instead
+db_connect.php
+
+# Environment
+.env
+.env.*
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
