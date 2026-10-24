@@ -1,0 +1,17 @@
+# Database config with credentials - use config/database.example.php instead
+config/database.php
+
+# Environment
+.env
+.env.*
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# PHP logs
+*.log
+error_log

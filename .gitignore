@@ -1,0 +1,55 @@
+# ============================================
+# ROOT GITIGNORE — suwanich_silaon project
+# ============================================
+
+# --- Secrets & Credentials ---
+.env
+.env.*
+**/db_connect.php
+**/config/database.php
+
+# --- Node / Mobile App ---
+node_modules/
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+
+# --- Android build ---
+android/app/build/
+android/build/
+android/.gradle/
+android/.kotlin/
+android/app/debug.keystore
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# --- Metro ---
+.metro-health-check*
+
+# --- Database files ---
+*.db
+*.db-shm
+*.db-wal
+
+# --- IDE ---
+.vscode/
+.idea/
+
+# --- OS ---
+.DS_Store
+*.pem
+Thumbs.db
+
+# --- Logs ---
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+*.log
+error_log
+
+# --- TypeScript ---
+*.tsbuildinfo
